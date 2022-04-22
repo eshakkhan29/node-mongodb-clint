@@ -11,11 +11,10 @@ const Home = () => {
             method: 'DELETE',
         }).then(res => res.json())
             .then(data => {
-                if (data.deletedCount > 0) {
-                    alert('lol')
-                    const restUser = users.filter(user => user._id !== id)
-                    setUsers(restUser);
-                }
+                console.log(data);
+                const restUser = users.filter(user => user._id !== id)
+                setUsers(restUser);
+                alert('lol')
             })
     }
 
